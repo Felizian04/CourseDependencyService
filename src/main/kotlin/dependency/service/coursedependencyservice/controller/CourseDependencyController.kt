@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/dependencies")
+@CrossOrigin(origins = ["http://localhost:4200"])
 class CourseDependencyController(private val repository: CourseRepository) {
 
     @GetMapping("/direct/{name}")
